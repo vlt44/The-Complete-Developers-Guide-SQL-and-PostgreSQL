@@ -1,5 +1,3 @@
-# The-Complete-Developers-Guide-SQL-and-PostgreSQL
-
 # SQL & PostgreSQL: The Complete Developer's Guide
 
 A collection of exercises and projects completed while working through Stephen Grider's course, **[SQL and PostgreSQL: The Complete Developer's Guide](https://www.udemy.com/course/sql-and-postgresql/)**.
