@@ -92,3 +92,15 @@ SELECT name, population / area FROM cities;
 ```
 SELECT name, population / area AS density FROM cities;
 ```
+
+- string operator
+
+```
+SELECT name || ', ' || country AS location FROM citites;
+```
+
+- concat and upper function
+
+```
+SELECT UPPER(CONCAT(name, ', ', country)) AS location FROM cities;
+```
