@@ -49,3 +49,8 @@ SELECT name || ', ' || country AS location FROM citites;
 -- concat and upper function
 
 SELECT UPPER(CONCAT(name, ', ', country)) AS location FROM cities;
+
+-- filter rows with where
+-- data source is filtered then where clause is applied, and select statement is executed
+
+SELECT name, area FROM cities WHERE area > 4000;
