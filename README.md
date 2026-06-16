@@ -34,3 +34,7 @@ The course introduces a simple framework for designing relational databases:
 ### Project 1
 
 [Simple - But Powerful - SQL Statements](/Project1/SQLstatements.sql)
+
+### Project 2
+
+[Photo Sharing DB](/Project2/)
