@@ -76,3 +76,11 @@ SELECT name, population / area AS population_density FROM cities WHERE populatio
 -- update properties of existing rows
 
 UPDATE cities SET population = 39505000 WHERE name = 'Tokyo';
+
+-- delete row
+
+DELETE FROM cities WHERE name = 'Sao Paulo';
+
+-- insert back deleted row
+INSERT INTO cities (name, country, population, area)
+VALUES ('Sao Paulo', 'Brazil', 20935000, 3043);
