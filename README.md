@@ -41,6 +41,13 @@ The course introduces a simple framework for designing relational databases:
 
 - Features that seem to indicate a relationship or ownership between two types of resources need to be reflected in our table design
 
+## Four Relationships
+
+- Many-to-one
+- One-to-many
+- Many-to-many
+- One-to-one
+
 ### Project 1
 
 [Simple - But Powerful - SQL Statements](/Project1/SQLstatements.sql)
