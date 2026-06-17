@@ -31,27 +31,33 @@ The course introduces a simple framework for designing relational databases:
 3. **Select appropriate data types**
    - What type of data should each property contain?
 
-## What Tables Should We Make?
+### What Tables Should We Make?
 
 - Common features (like authentication, comments, etc) are frequently built with conventional table names and columns
-
-> You're not the first
 
 - What type of resources exist in your app? Create a separate table for each of these features
 
 - Features that seem to indicate a relationship or ownership between two types of resources need to be reflected in our table design
 
-## Four Relationships
+### Four Relationships
 
 - Many-to-one
 - One-to-many
 - Many-to-many
 - One-to-one
 
-### Project 1
+### Primary Key
+
+Uniquely identifies record in a table
+
+### Foreign Key
+
+A foreign key creates a relationship between two tables by referencing the primary key of another table
+
+## Project 1
 
 [Simple - But Powerful - SQL Statements](/Project1/SQLstatements.sql)
 
-### Project 2
+## Project 2
 
 [Photo Sharing DB](/Project2/)
