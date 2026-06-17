@@ -73,3 +73,11 @@ A foreign key creates a relationship between two tables by referencing the prima
 ## Project 2
 
 [Photo Sharing DB](/Project2/)
+Database For a Photo-Sharing App
+
+| Tables   | Description              |
+| -------- | ------------------------ |
+| users    | Data related to users    |
+| photos   | Data related to photos   |
+| comments | Data related to comments |
+| likes    | Data related to likes    |
