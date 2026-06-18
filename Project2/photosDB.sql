@@ -31,7 +31,7 @@ JOIN users ON users.id = photos.user_id;
 -- delete photos table
 DROP TABLE photos;
 
-
+-- recreate photos table with ON DELETE CASCADE
 CREATE TABLE photos (
 id SERIAL PRIMARY KEY,
 url VARCHAR(200),
@@ -47,3 +47,7 @@ VALUES
 ('http:/754.jpg', 2),
 ('http:/35.jpg', 3),
 ('http:/256.jpg', 4);
+
+-- photos related to user deleted
+DELETE FROM users
+WHERE id = 1;
