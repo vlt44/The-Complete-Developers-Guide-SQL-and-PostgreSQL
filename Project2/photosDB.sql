@@ -27,3 +27,23 @@ WHERE user_id = 1;
 -- query to select all photos along with the username of the user who uploaded them
 SELECT url, username FROM photos
 JOIN users ON users.id = photos.user_id;
+
+-- delete photos table
+DROP TABLE photos;
+
+
+CREATE TABLE photos (
+id SERIAL PRIMARY KEY,
+url VARCHAR(200),
+user_id INTEGER REFERENCES users(id) ON DELETE CASCADE
+);
+ 
+INSERT INTO photos (url, user_id)
+VALUES
+('http:/one.jpg', 4),
+('http:/two.jpg', 1),
+('http:/25.jpg', 1),
+('http:/36.jpg', 1),
+('http:/754.jpg', 2),
+('http:/35.jpg', 3),
+('http:/256.jpg', 4);
