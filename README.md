@@ -66,6 +66,28 @@ A foreign key creates a relationship between two tables by referencing the prima
 - Exactly equal to the primary key of the referenced row
 - Will change if the relationship changes
 
+### Joins
+
+- Produces values by merging together rows from different related tables
+- Use a join most times that you're asked to find data that involves multiple resources
+
+#### Join Types
+
+- INNER JOIN
+- LEFT JOIN
+- RIGHT JOIN
+- FULL JOIN
+
+Example:
+
+- Find all comments and the users who wrote them
+- Find all photos and the users who uploaded them
+- Find all likes for a photo
+
+### Aggregation
+
+- Words like 'most', 'average', 'least' are a sign that you need to use an aggregation
+
 ## Project 1
 
 [Simple - But Powerful - SQL Statements](/Project1/SQLstatements.sql)
