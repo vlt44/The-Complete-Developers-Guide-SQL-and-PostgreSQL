@@ -158,10 +158,15 @@ VALUES
   FROM photos
   LEFT JOIN users ON users.id = photos.user_id
 
--- add new user
+-- Add new user
   INSERT INTO users (username) VALUES ('HIM');
 
--- retrieve photos with username of the user associated with the photo, including users without a photo
+-- Retrieve photos with username of the user associated with the photo, including users without a photo
   SELECT url, username 
   FROM photos 
   RIGHT JOIN users ON users.id = photos.user_id;
+
+-- Retrieve all results from photos and users, including those without a match
+  SELECT url, username 
+  FROM photos 
+  FULL JOIN users ON users.id = photos.user_id;
