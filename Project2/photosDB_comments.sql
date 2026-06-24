@@ -196,3 +196,8 @@ VALUES
   SELECT COUNT(id) FROM comments;
   SELECT AVG(id) FROM comments; 
   SELECT SUM(id) FROM comments;
+
+-- Number of comments a user has made
+  SELECT user_id, COUNT(id) AS num_commments_created
+  FROM comments 
+  GROUP BY user_id; 
