@@ -170,3 +170,11 @@ VALUES
   SELECT url, username 
   FROM photos 
   FULL JOIN users ON users.id = photos.user_id;
+
+-- User can comment on photos that they posted.
+-- Who is commenting on their own photo? 
+-- list the url and contents for every photo/comment where the author of the photo is also the author of the comment.
+  SELECT url, contents
+  FROM comments
+  JOIN photos ON photos.id = comments.photo_id
+  WHERE comments.user_id = photos.user_id;
