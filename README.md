@@ -31,7 +31,7 @@ The course introduces a simple framework for designing relational databases:
 3. **Select appropriate data types**
    - What type of data should each property contain?
 
-### What Tables Should We Make?
+#### What Tables Should We Make?
 
 - Common features (like authentication, comments, etc) are frequently built with conventional table names and columns
 
@@ -39,7 +39,7 @@ The course introduces a simple framework for designing relational databases:
 
 - Features that seem to indicate a relationship or ownership between two types of resources need to be reflected in our table design
 
-### Four Relationships
+#### Four Relationships
 
 - Many-to-one
 - One-to-many
@@ -84,9 +84,17 @@ Example:
 - Find all photos and the users who uploaded them
 - Find all likes for a photo
 
-### Aggregation
+#### Grouping
+
+- Reduces many rows down to fewer rows
+- Done by using the `GROUP BY` keyword
+- Visualizing the result is key to use
+
+#### Aggregation
 
 - Words like 'most', 'average', 'least' are a sign that you need to use an aggregation
+- Looks at many rows and calculates a single value
+- Done by using aggregate functions
 
 ## Project 1
 
