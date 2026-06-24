@@ -179,8 +179,14 @@ VALUES
   JOIN photos ON photos.id = comments.photo_id
   WHERE comments.user_id = photos.user_id;
 
--- all photos and comments where the author of the photo and comment is this user
+-- All photos and comments where the author of the photo and comment is this user
   SELECT url, contents, username
   FROM comments
   JOIN photos ON photos.id = comments.photo_id
   JOIN users ON users.id = comments.user_id AND users.id = photos.user_id;
+
+-- Get all unique users with comments associated with them
+  SELECT user_id
+  FROM comments
+  GROUP BY user_id;
+
