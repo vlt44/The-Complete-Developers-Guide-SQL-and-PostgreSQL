@@ -210,7 +210,14 @@ VALUES
   FROM comments
   GROUP BY user_id;
 
-  -- find the number of comments per photo
+-- find the number of comments per photo
   SELECT photo_id, COUNT(*)
   FROM comments
   GROUP BY photo_id;
+
+-- find the number of comments per photo where the photo_id is less than 3 and the photo has more than 2 comments
+  SELECT photo_id, COUNT(*)
+  FROM comments
+  WHERE photo_id < 3
+  GROUP BY photo_id;
+  HAVING COUNT(*) > 2;
