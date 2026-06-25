@@ -96,6 +96,41 @@ Example:
 - Looks at many rows and calculates a single value
 - Done by using aggregate functions
 
+### SQL Query Execution Order
+
+Although we write SQL queries in a different order, the database processes them in the following logical sequence:
+
+| Clause             | Purpose                                                          |
+| ------------------ | ---------------------------------------------------------------- |
+| `FROM`             | Specifies the starting set of rows (the source table).           |
+| `JOIN`             | Merges data from additional tables.                              |
+| `WHERE`            | Filters individual rows before grouping.                         |
+| `GROUP BY`         | Groups rows that share the same values.                          |
+| `HAVING`           | Filters the groups created by `GROUP BY`.                        |
+| `SELECT`           | Chooses which columns or expressions to return.                  |
+| `ORDER BY`         | Sorts the final result set.                                      |
+| `LIMIT` / `OFFSET` | Restricts the number of rows returned and optionally skips rows. |
+
+#### Logical Processing Order
+
+```text
+FROM
+  ↓
+JOIN
+  ↓
+WHERE
+  ↓
+GROUP BY
+  ↓
+HAVING
+  ↓
+SELECT
+  ↓
+ORDER BY
+  ↓
+LIMIT / OFFSET
+```
+
 ## Project 1
 
 [Simple - But Powerful - SQL Statements](/Project1/SQLstatements.sql)
