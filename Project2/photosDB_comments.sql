@@ -141,86 +141,86 @@ VALUES
   ('Minima dolorem reiciendis excepturi culpa sapiente eos deserunt ut.', 3, 3);
 
 -- Retrieve comment contents and match with usernames
-  SELECT contents, username FROM comments
-  JOIN users ON users.id = comments.user_id;
+SELECT contents, username FROM comments
+JOIN users ON users.id = comments.user_id;
 
 -- Retrieve comment contents and match with photo urls
-  SELECT contents, url FROM comments
-  JOIN photos ON photos.id = comments.photo_id;
+SELECT contents, url FROM comments
+JOIN photos ON photos.id = comments.photo_id;
 
 -- Retrieve photos with username of the user associated with the photo
-  SELECT url, username
-  FROM photos
-  JOIN users ON users.id = photos.user_id
+SELECT url, username
+FROM photos
+JOIN users ON users.id = photos.user_id
 
 -- Retrieve photos with username of the user associated with the photo, including photos without a user
-  SELECT url, username
-  FROM photos
-  LEFT JOIN users ON users.id = photos.user_id
+SELECT url, username
+FROM photos
+LEFT JOIN users ON users.id = photos.user_id
 
 -- Add new user
-  INSERT INTO users (username) VALUES ('HIM');
+INSERT INTO users (username) VALUES ('HIM');
 
 -- Retrieve photos with username of the user associated with the photo, including users without a photo
-  SELECT url, username 
-  FROM photos 
-  RIGHT JOIN users ON users.id = photos.user_id;
+SELECT url, username 
+FROM photos 
+RIGHT JOIN users ON users.id = photos.user_id;
 
 -- Retrieve all results from photos and users, including those without a match
-  SELECT url, username 
-  FROM photos 
-  FULL JOIN users ON users.id = photos.user_id;
+SELECT url, username 
+FROM photos 
+FULL JOIN users ON users.id = photos.user_id;
 
 -- User can comment on photos that they posted.
 -- Who is commenting on their own photo? 
 -- list the url and contents for every photo/comment where the author of the photo is also the author of the comment.
-  SELECT url, contents
-  FROM comments
-  JOIN photos ON photos.id = comments.photo_id
-  WHERE comments.user_id = photos.user_id;
+SELECT url, contents
+FROM comments
+JOIN photos ON photos.id = comments.photo_id
+WHERE comments.user_id = photos.user_id;
 
 -- All photos and comments where the author of the photo and comment is this user
-  SELECT url, contents, username
-  FROM comments
-  JOIN photos ON photos.id = comments.photo_id
-  JOIN users ON users.id = comments.user_id AND users.id = photos.user_id;
+SELECT url, contents, username
+FROM comments
+JOIN photos ON photos.id = comments.photo_id
+JOIN users ON users.id = comments.user_id AND users.id = photos.user_id;
 
 -- Get all unique users with comments associated with them
-  SELECT user_id
-  FROM comments
-  GROUP BY user_id;
+SELECT user_id
+FROM comments
+GROUP BY user_id;
 
 -- Aggragate functions
-  SELECT MIN(id) FROM comments;
-  SELECT MAX(id) FROM comments;
-  SELECT COUNT(id) FROM comments;
-  SELECT AVG(id) FROM comments; 
-  SELECT SUM(id) FROM comments;
+SELECT MIN(id) FROM comments;
+SELECT MAX(id) FROM comments;
+SELECT COUNT(id) FROM comments;
+SELECT AVG(id) FROM comments; 
+SELECT SUM(id) FROM comments;
 
 -- Number of comments a user has made
-  SELECT user_id, COUNT(id) AS num_commments_created
-  FROM comments 
-  GROUP BY user_id; 
+SELECT user_id, COUNT(id) AS num_commments_created
+FROM comments 
+GROUP BY user_id; 
 
--- total number of rows
-  SELECT COUNT (*) FROM photos;
+-- Total number of rows
+SELECT COUNT (*) FROM photos;
 
--- total number of comments per user
-  SELECT user_id, COUNT(*)
-  FROM comments
-  GROUP BY user_id;
+-- Total number of comments per user
+SELECT user_id, COUNT(*)
+FROM comments
+GROUP BY user_id;
 
--- find the number of comments per photo
-  SELECT photo_id, COUNT(*)
-  FROM comments
-  GROUP BY photo_id;
+-- Find the number of comments per photo
+SELECT photo_id, COUNT(*)
+FROM comments
+GROUP BY photo_id;
 
--- find the number of comments per photo where the photo_id is less than 3 and the photo has more than 2 comments
-  SELECT photo_id, COUNT(*)
-  FROM comments
-  WHERE photo_id < 3
-  GROUP BY photo_id;
-  HAVING COUNT(*) > 2;
+-- Find the number of comments per photo where the photo_id is less than 3 and the photo has more than 2 comments
+SELECT photo_id, COUNT(*)
+FROM comments
+WHERE photo_id < 3
+GROUP BY photo_id;
+HAVING COUNT(*) > 2;
 
 -- For the first 50 photos, find the number of comments per user where the user has made more than 20 comments
 SELECT user_id, COUNT(*)
