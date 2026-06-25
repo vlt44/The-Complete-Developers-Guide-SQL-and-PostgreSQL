@@ -221,3 +221,10 @@ VALUES
   WHERE photo_id < 3
   GROUP BY photo_id;
   HAVING COUNT(*) > 2;
+
+-- For the first 50 photos, find the number of comments per user where the user has made more than 20 comments
+SELECT user_id, COUNT(*)
+FROM comments
+WHERE photo_id < 50
+GROUP BY user_id
+HAVING COUNT(*) > 20;
