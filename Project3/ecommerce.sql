@@ -777,3 +777,17 @@ FROM products
 ORDER BY price
 LIMIT 5
 OFFSET 1;
+
+-- Retrieve the first 20 products ordered by price
+SELECT *
+FROM products
+ORDER BY price
+LIMIT 20
+OFFSET 0;
+
+-- Retrieve the second 20 products ordered by price
+SELECT *
+FROM products
+ORDER BY price
+LIMIT 20
+OFFSET 20;
