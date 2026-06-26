@@ -748,3 +748,8 @@ ORDER BY name;
 SELECT *
 FROM products
 ORDER BY name DESC;
+
+-- Order by properties, sort by price first, then by weight
+SELECT *
+FROM products
+ORDER BY price, weight;
