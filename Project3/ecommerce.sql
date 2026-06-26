@@ -754,24 +754,24 @@ SELECT *
 FROM products
 ORDER BY price, weight;
 
--- limit the number of results returned to 10
+-- Limit the number of results returned to 10
 SELECT *
 FROM products
 LIMIT 10;
 
--- limit the number of results returned to 5, ordered by price least expensive
+-- Limit the number of results returned to 5, ordered by price least expensive
 SELECT *
 FROM products
 ORDER BY price
 LIMIT 5;
 
--- limit the number of results returned to 5, ordered by price most expensive
+-- Limit the number of results returned to 5, ordered by price most expensive
 SELECT *
 FROM products
 ORDER BY price DESC
 LIMIT 5;
 
--- limit the number of results returned to 5, ordered by price least expensive, skip the first result
+-- Limit the number of results returned to 5, ordered by price least expensive, skip the first result
 SELECT *
 FROM products
 ORDER BY price
