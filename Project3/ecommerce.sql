@@ -738,3 +738,13 @@ ORDER BY price;
 SELECT *
 FROM products
 ORDER BY price DESC;
+
+-- Order by name in ascending order
+SELECT *
+FROM products
+ORDER BY name;
+
+-- Order by name in descending order
+SELECT *
+FROM products
+ORDER BY name DESC;
