@@ -770,3 +770,10 @@ SELECT *
 FROM products
 ORDER BY price DESC
 LIMIT 5;
+
+-- limit the number of results returned to 5, ordered by price least expensive, skip the first result
+SELECT *
+FROM products
+ORDER BY price
+LIMIT 5
+OFFSET 1;
