@@ -131,6 +131,18 @@ ORDER BY
 LIMIT / OFFSET
 ```
 
+#### LIMIT
+
+- Limits the number of rows returned by a query
+- Useful when working with large datasets
+- Often used with `ORDER BY`
+
+#### OFFSET
+
+- Skips a specified number of rows before returning results
+- Often used together with `LIMIT`
+- Commonly used for pagination
+
 ## Project 1
 
 [Simple - But Powerful - SQL Statements](/Project1/SQLstatements.sql)
