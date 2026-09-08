@@ -358,7 +358,9 @@ Insert and update data
 
 ![IG tables](/Project5_DesignIG/img-designIGtables.png)
 
-### `Likes` System Requirements
+### `Likes` System
+
+#### Requirements
 
 - Each user can like a specific post a single time.
 - A user should be able to "unlike" a post.
@@ -393,12 +395,35 @@ A `likes` table must be created or build a reactions table instead
 
 #### -Alternative Polymorphic Association Solution-
 
+![Alternative Polymorphic Assoc Table](/Project5_DesignIG/img-alternative.png)
+
+```
+Add CHECK of (
+COALESCE ((post_id)::BOOLEAN::INTEGER, 0)
++
+COALESCE ((comment_id)::BOOLEAN::INTEGER, 0)
+) = 1
+```
+
+- Each possible type of relation gets its own FK column
+- We'd still want to make sure either post_id or comment_id
+  is not null
+
 #### -Simpliest Solution-
 
----
+![Simpliest Table](/Project5_DesignIG/img-simple.png)
 
-### `Mentions` System Requirements
+- Each type of like gets its own table
+- Still want to write queries that will count up all likes? You can use a Union or a View
 
-### `Hashtags` System Requirements
+### `Mentions` System
 
-### `Followers` System Requirements
+#### Requirements
+
+### `Hashtags` System
+
+#### Requirements
+
+### `Followers` System
+
+#### Requirements
